@@ -1,0 +1,12 @@
+[gpg]
+	format = ssh
+[user]
+	signingkey = /path/to/key.pub
+	email = john.doe@example.com
+	name = John Doe
+[commit]
+	gpgsign = true
+[tag]
+	gpgsign = true
+[gpg "ssh"]
+	allowedSignersFile = /path/to/allowed_signers
