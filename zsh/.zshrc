@@ -108,3 +108,8 @@ export PATH="$GO_BIN:$PATH"
 # Zig
 export ZIG_BIN="/usr/local/zig"
 export PATH="$ZIG_BIN:$PATH"
+
+# Fly.io
+export FLYCTL_INSTALL="$HOME/.fly"
+export PATH="$FLYCTL_INSTALL/bin:$PATH"
+
