@@ -99,17 +99,21 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias vim="nvim"
 
-# Golang
+#
+# Aliases
+#
+
+alias vim="nvim"
+alias projects="cd ~/Documents/projects"
+alias cat="bat"
+
+#
+# Exports
+#
+
 export GO_BIN="/usr/local/go/bin"
 export PATH="$GO_BIN:$PATH"
 
-# Zig
 export ZIG_BIN="/usr/local/zig"
 export PATH="$ZIG_BIN:$PATH"
-
-# Fly.io
-export FLYCTL_INSTALL="$HOME/.fly"
-export PATH="$FLYCTL_INSTALL/bin:$PATH"
-
