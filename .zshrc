@@ -118,6 +118,9 @@ export PATH="$GO_BIN:$PATH"
 export ZIG_BIN="/usr/local/zig"
 export PATH="$ZIG_BIN:$PATH"
 
+export ODIN_PATH="/usr/local/odin"
+export PATH="$ODIN_PATH:$PATH"
+
 export FZF_DEFAULT_COMMAND="fd . $HOME"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="fd -t d . $HOME"
