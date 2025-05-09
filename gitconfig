@@ -1,0 +1,12 @@
+[user]
+  signingkey = ssh-ed25519 AAAAC3 user@host
+  email = johndoe@example.com
+  name = John Doe
+[commit]
+  gpgsign = true
+[tag]
+  gpgsign = true
+[gpg]
+  format = ssh
+[gpg "ssh"]
+  allowedSignersFile = /path/to/allowed_signers
