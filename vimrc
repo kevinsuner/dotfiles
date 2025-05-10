@@ -4,20 +4,9 @@
 "   - c: change
 "   - gn: next match
 
-let mapleader = ","
-
-let NERDTreeQuitOnOpen=1
-let NERDTreeShowHidden=1
-
-let g:ctrlp_map = "<leader>f"
-let g:ctrlp_cmd = "CtrlP"
-let g:ctrlp_working_path_mode = "ra"
-let g:ctrlp_custom_ignore = { "dir": "\v[\/]\.(git|hg|svn)$", "file": "\v\.(exe|so|dll)$" }
-
-filetype off
+syntax enable
 filetype plugin indent on
-
-syntax on
+colorscheme gruvbox
 
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 set background=dark
@@ -32,6 +21,7 @@ set shiftwidth=2
 set softtabstop=2
 set timeoutlen=1000
 set ttimeoutlen=0
+set termguicolors
 set nocompatible
 set hlsearch
 set number
@@ -46,6 +36,16 @@ set showcmd
 set noswapfile
 set splitright
 set splitbelow
+
+let mapleader = ","
+
+let NERDTreeQuitOnOpen=1
+let NERDTreeShowHidden=1
+
+let g:ctrlp_map = "<leader>f"
+let g:ctrlp_cmd = "CtrlP"
+let g:ctrlp_working_path_mode = "ra"
+let g:ctrlp_custom_ignore = { "dir": "\v[\/]\.(git|hg|svn)$", "file": "\v\.(exe|so|dll)$" }
 
 " Toggle file explorer
 nnoremap <leader>e :NERDTreeToggle<CR>
@@ -104,4 +104,3 @@ nnoremap <leader>kk <C-w>k
 " Move to bottom pane
 nnoremap <leader>jj <C-w>j
 
-autocmd vimenter * ++nested colorscheme gruvbox
