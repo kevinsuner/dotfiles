@@ -1,0 +1,19 @@
+[
+  {
+    "context": "Editor && vim_mode == normal && !VimWaiting",
+    "bindings": {
+      "space w": "workspace::SaveWithoutFormat",
+      "space h": "workspace::ActivatePaneLeft",
+      "space l": "workspace::ActivatePaneRight",
+      "space j": "workspace::ActivatePaneDown",
+      "space k": "workspace::ActivatePaneUp",
+      "space e": "workspace::ToggleLeftDock",
+      "space q": "pane::CloseActiveItem",
+      "space space l": "pane::SplitVertical",
+      "space space j": "pane::SplitHorizontal",
+      "space space f": "editor::Format",
+      "space f": "file_finder::Toggle",
+      "space s": "buffer_search::Deploy"
+    }
+  }
+]
