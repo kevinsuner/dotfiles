@@ -33,7 +33,9 @@ vim.opt.wrap            = false
 
 vim.cmd("syntax enable")
 vim.cmd("filetype plugin indent on")
-vim.cmd("colorscheme gruvbox")
+vim.cmd("colorscheme gruber-darker")
+vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 
 vim.g.mapleader = ","
 
@@ -49,7 +51,7 @@ vim.g.ctrlp_custom_ignore       = {
 }
 
 require("nvim-treesitter.configs").setup({
-    ensure_installed    = { "lua", "c", "python", "go", "odin" },
+    ensure_installed    = { "lua", "c", "python", "go", "odin", "elixir", "dart" },
     highlight           = { enable = true },
     indent              = { enable = true }
 })
@@ -74,4 +76,3 @@ vim.keymap.set("n", "<leader>hh", "<C-w>h", opts)                   -- Navigate 
 vim.keymap.set("n", "<leader>ll", "<C-w>l", opts)                   -- Navigate to right pane
 vim.keymap.set("n", "<leader>kk", "<C-w>k", opts)                   -- Navigate to upper pane
 vim.keymap.set("n", "<leader>jj", "<C-w>j", opts)                   -- Navigate to lower pane
-
