@@ -20,6 +20,7 @@ vim.keymap.set({ 'n', 'v', 'x' }, '<leader>d', '"+d<CR>')
 
 vim.pack.add({
 	{ src = "https://github.com/neanias/everforest-nvim" },
+	{ src = "https://github.com/blazkowolf/gruber-darker.nvim" },
 	{ src = "https://github.com/echasnovski/mini.pick" },
 	{ src = "https://github.com/stevearc/oil.nvim" },
 	{ src = "https://github.com/neovim/nvim-lspconfig" },
@@ -27,7 +28,9 @@ vim.pack.add({
 })
 
 require "mini.pick".setup()
-require "oil".setup()
+require "oil".setup({
+	view_options = { show_hidden = true },
+})
 require "nvim-treesitter.configs".setup({
 	ensure_installed = { 'lua', 'c', 'odin', 'go', 'sql', 'html', 'css' },
 	highlight = { enable = true },
@@ -41,7 +44,7 @@ vim.keymap.set('n', '<leader>e', ":Oil<CR>")
 vim.lsp.enable({ 'lua_ls', 'clangd', 'gopls' })
 vim.keymap.set('n', '<leader>lf', vim.lsp.buf.format)
 
-vim.cmd("colorscheme everforest")
+vim.cmd("colorscheme gruber-darker")
 vim.cmd(":hi statusline guibg=NONE")
 vim.api.nvim_set_hl(0, 'Normal', { bg = nil })
 vim.api.nvim_set_hl(0, 'NormalFloat', { bg = nil })
