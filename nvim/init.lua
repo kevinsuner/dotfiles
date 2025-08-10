@@ -26,7 +26,8 @@ vim.pack.add({
 	{ src = "https://github.com/nvim-treesitter/nvim-treesitter" },
 })
 
-require "mini.pick".setup()
+require "gruvbox".setup({ terminal_colors = true, contrast = "hard" })
+require "mini.pick".setup({})
 require "oil".setup({
 	view_options = { show_hidden = true },
 })
@@ -34,10 +35,6 @@ require "nvim-treesitter.configs".setup({
 	ensure_installed = { 'lua', 'c', 'odin', 'go', 'sql', 'html', 'css' },
 	highlight = { enable = true },
 	indent = { enable = true },
-})
-require "gruvbox".setup({
-	terminal_colors = true,
-	transparent_mode = true,
 })
 
 vim.keymap.set('n', '<leader>f', ":Pick files<CR>")
