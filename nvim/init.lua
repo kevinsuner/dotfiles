@@ -44,7 +44,7 @@ vim.keymap.set('n', '<leader>f', ":Pick files<CR>")
 vim.keymap.set('n', '<leader>h', ":Pick help<CR>")
 vim.keymap.set('n', '<leader>e', ":Oil<CR>")
 
-vim.lsp.enable({ 'lua_ls', 'clangd', 'gopls' })
+vim.lsp.enable({ 'clangd', 'gopls' })
 vim.keymap.set('n', '<leader>lf', vim.lsp.buf.format)
 
 vim.cmd("colorscheme gruvbox")
