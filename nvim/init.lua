@@ -19,8 +19,7 @@ vim.keymap.set({ 'n', 'v', 'x' }, '<leader>y', '"+y<CR>')
 vim.keymap.set({ 'n', 'v', 'x' }, '<leader>d', '"+d<CR>')
 
 vim.pack.add({
-	{ src = "https://github.com/neanias/everforest-nvim" },
-	{ src = "https://github.com/blazkowolf/gruber-darker.nvim" },
+	{ src = "https://github.com/ellisonleao/gruvbox.nvim" },
 	{ src = "https://github.com/echasnovski/mini.pick" },
 	{ src = "https://github.com/stevearc/oil.nvim" },
 	{ src = "https://github.com/neovim/nvim-lspconfig" },
@@ -36,6 +35,10 @@ require "nvim-treesitter.configs".setup({
 	highlight = { enable = true },
 	indent = { enable = true },
 })
+require "gruvbox".setup({
+	terminal_colors = true,
+	transparent_mode = true,
+})
 
 vim.keymap.set('n', '<leader>f', ":Pick files<CR>")
 vim.keymap.set('n', '<leader>h', ":Pick help<CR>")
@@ -44,9 +47,5 @@ vim.keymap.set('n', '<leader>e', ":Oil<CR>")
 vim.lsp.enable({ 'lua_ls', 'clangd', 'gopls' })
 vim.keymap.set('n', '<leader>lf', vim.lsp.buf.format)
 
-vim.cmd("colorscheme gruber-darker")
+vim.cmd("colorscheme gruvbox")
 vim.cmd(":hi statusline guibg=NONE")
-vim.api.nvim_set_hl(0, 'Normal', { bg = nil })
-vim.api.nvim_set_hl(0, 'NormalFloat', { bg = nil })
-vim.api.nvim_set_hl(0, 'NormalNC', { bg = nil })
-vim.api.nvim_set_hl(0, 'EndOfBuffer', { bg = nil })
